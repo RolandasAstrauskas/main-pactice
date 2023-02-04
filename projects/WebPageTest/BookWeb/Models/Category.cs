@@ -1,8 +1,12 @@
-﻿namespace BookWeb.Models
-{
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BookWeb.Models
+{   
     public class Category
     {
-        private int Id { get; set; }
+        [Key]
+        public int Id { get; set; }
+        [Required]
         public string? Name { get; set; }
         public int DisplayOrder { get; set; }
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;

@@ -1,6 +1,8 @@
 *.suo
 *.user
 *.sdf
+*.applicationhost.config
+
 bin
 obj
 Debug

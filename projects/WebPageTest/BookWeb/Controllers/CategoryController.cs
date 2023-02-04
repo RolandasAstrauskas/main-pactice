@@ -64,7 +64,7 @@ namespace BookWeb.Controllers
         }
 
         //POST
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Category obj)
         {

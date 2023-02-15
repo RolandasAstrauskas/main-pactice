@@ -1,6 +1,5 @@
-using BookWeb.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+using WebPageTest.DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
  

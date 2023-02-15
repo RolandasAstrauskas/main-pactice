@@ -1,7 +1,7 @@
-﻿using BookWeb.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using WebPageTest.Models;
 
-namespace BookWeb.Data
+namespace WebPageTest.DataAccess
 {
     public class ApplicationDbContext : DbContext
     {

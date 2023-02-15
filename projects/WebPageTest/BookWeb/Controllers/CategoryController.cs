@@ -1,6 +1,6 @@
-﻿using BookWeb.Data;
-using BookWeb.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using WebPageTest.DataAccess;
+using WebPageTest.Models;
 
 namespace BookWeb.Controllers
 {

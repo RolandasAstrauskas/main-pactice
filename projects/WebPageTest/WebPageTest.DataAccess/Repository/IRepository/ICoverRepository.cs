@@ -2,8 +2,8 @@
 
 namespace WebPageTest.DataAccess.Repository.IRepository
 {
-    public interface ICategoryRepository : IRepository<Category>
+    public interface ICoverRepository : IRepository<Cover>
     {
-        void Update(Category obj);
+        void Update(Cover obj);
     }
 }

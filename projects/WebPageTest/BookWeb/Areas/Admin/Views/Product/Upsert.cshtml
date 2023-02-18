@@ -1,6 +1,7 @@
 ﻿@model WebPageTest.Models.ViewModels.ProductVM
 
  <form method="post" asp-action="Upsert" enctype="multipart/form-data">
+	 <input asp-for="Product.Id" hidden/>
 	 <div class="border p-3 mt-4 row">
 		 <div class="row pb-2">
 			 <h2 class="text-primary">@(Model.Product.Id!=0?"Updated":"Create")</h2>
@@ -48,7 +49,7 @@
 		 </div>
 		 <div class="mb-3">
 			 <label asp-for="Product.ImageUrl"></label>
-			 <input type="file" id="uploadBox" class="form-control"/>
+			 <input type="file" id="uploadBox" name="file" class="form-control"/>
 		 </div>
 		 <div class="mb-3 col-6">
 			 <label asp-for="Product.CategoryId"></label>
@@ -65,17 +66,18 @@
 			 <span aps-validation-for="Product.CoverId" class="text-danger"></span>
 		 </div>
 		 <div class="col-12">
-			 @if(Model.Product.Id!=0){
+			@if (Model.Product.Id != 0)
+			{
 				<button type="submit" class="btn btn-primary" style="width:150px">Update</button>
-			 }
-			 else
-			 {
-				 <button type="submit" onclick="return ValidateInput()" class="btn btn-primary" style="width:150px">Create</button>
-			 }
-		 <a asp-controller="Product" asp-action="Index" class="btn btn-secondary" style="width:150px">
-			 Back to list
-		 </a>
-		</div>
+			}
+			else
+			{
+				<button type="submit" onclick="return ValidateInput()" class="btn btn-primary" style="width:200px">Create</button>
+			}
+			<a asp-controller="Product" asp-action="Index" class="btn btn-primary" style="width:200px">
+				Back to List
+			</a>
+		 </div>
 	 </div>
  </form> 
 

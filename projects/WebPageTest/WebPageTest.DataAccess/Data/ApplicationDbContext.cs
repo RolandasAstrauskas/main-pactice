@@ -11,5 +11,6 @@ namespace WebPageTest.DataAccess
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Cover> Covers { get; set; }
+        public DbSet<Product> Product { get; set; }
     }
 }

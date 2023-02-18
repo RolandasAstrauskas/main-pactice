@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebPageTest.DataAccess.Repository.IRepository;
+﻿using WebPageTest.DataAccess.Repository.IRepository;
 using WebPageTest.Models;
 
 namespace WebPageTest.DataAccess.Repository
@@ -16,6 +11,7 @@ namespace WebPageTest.DataAccess.Repository
         {
             _db = db;
         }
+
         public void Update(Cover obj)
         {
             _db.Update(obj);

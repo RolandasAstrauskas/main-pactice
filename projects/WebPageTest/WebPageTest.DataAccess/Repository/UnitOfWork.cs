@@ -11,11 +11,13 @@ namespace WebPageTest.DataAccess.Repository
             _db = db;
             CategoryRepository = new CategoryRepository(_db);
             CoverRepository = new CoverRepository(_db);
+            ProductRepository = new ProductReporitory(_db);
         }
 
         public ICategoryRepository CategoryRepository { get; private set; }
-
         public ICoverRepository CoverRepository { get; private set; }
+        public IProductRepository ProductRepository { get; private set; }
+
 
         public void Save()
         {

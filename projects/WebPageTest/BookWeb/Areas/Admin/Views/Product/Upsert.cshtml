@@ -2,8 +2,11 @@
 
  <form method="post" asp-action="Upsert" enctype="multipart/form-data">
 	 <input asp-for="Product.Id" hidden/>
-	 <div class="border p-3 mt-4 row">
-		 <div class="row pb-2">
+	 <input asp-for="Product.ImageUrl" hidden/>
+	 <div class="row">
+		  <div class="col-10">
+			  	 <div class="border p-3 mt-4 row">
+		 <div class="col-12 pb-2">
 			 <h2 class="text-primary">@(Model.Product.Id!=0?"Updated":"Create")</h2>
 			 <hr />
 		 </div>
@@ -79,14 +82,25 @@
 			</a>
 		 </div>
 	 </div>
+		  </div>
+		  <div class="col-2 pt-4">
+			   <img src="@Model.Product.ImageUrl"
+			width="100%" style="border-radius:5px; border:1px solid #bbb9b9" />
+		  </div>
+	  </div>
  </form> 
 
  @section Scripts{
 	 @{
 		  <partial name="_ValidationScriptsPartial" />
 	 }
-
 	 <script>
+			tinymce.init({
+			  selector: 'textarea',
+			  plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tableofcontents footnotes mergetags autocorrect typography inlinecss',
+			  toolbar_mode: 'floating',
+			});
+
 			 function ValidateInput(){
 				 if(document.getElementById("uploadBox").value==""){
 					Swal.fire({

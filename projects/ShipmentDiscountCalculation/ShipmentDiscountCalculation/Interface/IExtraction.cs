@@ -2,7 +2,8 @@
 {
     internal interface IExtraction
     {
-        bool TryReadInput(object input);
-        bool TryReadDefaultRules();
+        bool TryCalculatePricesWithDiscount(string input, out string output);
+        void SetDefaultCompaniesPrices();
+        void SetDefaultDiscountRules();
     }
 }
